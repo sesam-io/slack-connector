@@ -1,0 +1,18 @@
+{
+  "_id": "{{@ system @}}",
+  "headers": {
+    "Authorization": "Bearer $SECRET(api_key)"
+  },
+  "operations": {
+    "conversations-list": {
+      "id_expression": "{{ id }}",
+      "method": "GET",
+      "next_page_link": "{% if body.response_metadata.next_cursor %}conversations.list?cursor={{ body.response_metadata.next_cursor }}{% endif %}",
+      "payload_property": "channels",
+      "url": "conversations.list"
+    }
+  },
+  "type": "system:rest",
+  "url_pattern": "https://slack.com/api/%s",
+  "verify_ssl": true
+}

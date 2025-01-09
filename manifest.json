@@ -1,0 +1,10 @@
+{
+  "auth": "api_key",
+  "additional_parameters": {},
+  "datatypes": {
+    "conversations": {
+      "template": "templates/conversations.json"
+    }
+  },
+  "system-template": "templates/system.json"
+}
