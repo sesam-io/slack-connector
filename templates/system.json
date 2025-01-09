@@ -8,6 +8,9 @@
       "id_expression": "{{ id }}",
       "method": "GET",
       "next_page_link": "{% if body.response_metadata.next_cursor %}conversations.list?cursor={{ body.response_metadata.next_cursor }}{% endif %}",
+      "params": {
+        "types": "public_channel,private_channel"
+      },
       "payload_property": "channels",
       "url": "conversations.list"
     }
